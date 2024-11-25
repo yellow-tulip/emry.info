@@ -1,3 +1,7 @@
 export const getAssetUrl = (filename) => {
-  return `${import.meta.env.VITE_R2_BUCKET_URL}/portfolio/${filename}`;
+  const baseUrl = import.meta.env.VITE_R2_BUCKET_URL;
+  const url = `${baseUrl}/portfolio/${filename}`;
+  console.log('Base URL:', baseUrl);
+  console.log('Generated URL:', url);
+  return url;
 };

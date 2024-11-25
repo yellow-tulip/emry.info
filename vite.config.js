@@ -22,7 +22,8 @@ export default defineConfig({
     }
   },
   define: {
-    'process.env': {}
+    // Expose env variables
+    'import.meta.env.VITE_R2_BUCKET_URL': JSON.stringify(process.env.VITE_R2_BUCKET_URL)
   },
   // Handle client-side routing
   preview: {
