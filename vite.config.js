@@ -21,10 +21,8 @@ export default defineConfig({
       }
     }
   },
-  define: {
-    // Expose env variables
-    'import.meta.env.VITE_R2_BUCKET_URL': JSON.stringify(process.env.VITE_R2_BUCKET_URL)
-  },
+  // Ensure environment variables are properly exposed
+  envPrefix: 'VITE_',
   // Handle client-side routing
   preview: {
     port: 3000,
