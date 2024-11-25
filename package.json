@@ -6,13 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "VITE_R2_BUCKET_URL=$VITE_R2_BUCKET_URL vite build",
-    "preview": "vite preview",
-    "deploy": "npm run build && vercel --prod"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.0.1",
+    "react-router-dom": "^6.20.1",
     "tone": "^15.0.4"
   },
   "devDependencies": {
