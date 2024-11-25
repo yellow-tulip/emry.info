@@ -8,7 +8,8 @@ export const getAssetUrl = (filename) => {
   // Remove any leading slashes from filename
   const cleanFilename = filename.replace(/^\/+/, '');
   
-  const url = `${cleanBaseUrl}/portfolio/${cleanFilename}`;
+  // Don't include 'portfolio' in the path since it's the bucket name
+  const url = `${cleanBaseUrl}/${cleanFilename}`;
   console.log('Generated URL:', url);
   return url;
 };
