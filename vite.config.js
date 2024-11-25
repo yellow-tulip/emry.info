@@ -12,9 +12,23 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom']
+        }
+      }
+    }
   },
   define: {
     'process.env': {}
-  }
+  },
+  // Handle client-side routing
+  preview: {
+    port: 3000,
+    host: true
+  },
+  // Add base URL for production
+  base: '/'
 })
